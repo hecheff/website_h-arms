@@ -1,0 +1,238 @@
+:root {
+  --color_orange_highlight: #E8941D;
+  --color_gray_dark:        #333333;
+}
+
+
+body{
+  font:     15px/1.5 Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  padding:  0;
+  margin:   0;
+
+  background-color: #000000;
+  color:            #FFFFFF;
+}
+
+/* ---------- GLOBALS ---------- */
+.container {
+  width:    80%;
+  margin:   auto;
+  overflow: hidden;
+}
+ul {
+  margin:   0;
+  padding:  0;
+}
+
+div.divider { height:0; width:0; margin:0; padding:0; border:none; float:none; }
+/* ---------- /GLOBALS ---------- */
+
+/* Header */
+header {
+  background:     #35424ACC;
+  padding:        10px 0;
+  min-height:     70px;
+  border-bottom:  var(--color_orange_highlight) 3px solid;
+
+  width:100%;
+  /*position:fixed;*/
+}
+
+header a {
+  color:            #FFFFFF;
+  text-decoration:  none;
+  text-transform:   uppercase;
+  font-weight:      bold;
+}
+
+header #branding    { float:left; }
+header #branding h1 { font-size:30px; margin:0; }
+
+header #header_icon {
+  float:left;
+  width:100px;
+  height:70px;
+  background-image:url('../images/logo.png');
+  background-size:auto;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+header #header_text {
+  float:left;
+  width:auto;
+  height:70px;
+  margin-left:20px;
+  vertical-align: bottom;
+}
+
+header #topBar {
+  float:right;
+}
+
+header #langBar {
+  float:right;
+  font-size:  12px;
+}
+header #langBar li {
+  display:  inline;
+  padding:  0 10px;
+}
+
+header #langBar ul#lang_long  { visibility: visible; }
+header #langBar ul#lang_short { visibility: hidden;  }
+
+header #navBar {
+  float:right;
+  font-size:18px;
+}
+header #navBar li {
+  display:  inline;
+  padding:  0 10px;
+}
+
+
+header .highlight, header .current a {
+  color: var(--color_orange_highlight);
+  font-weight: bold;
+}
+
+header a:hover { color:#999999; }
+
+#kCom {
+  display:none;
+}
+
+#showcase {
+  min-height:250px;
+  text-align:left;
+
+  background-image:     url('../images/top_bg.jpg');
+  background-size:      100%;
+  background-repeat:    no-repeat;
+  background-position:  center;
+}
+
+#showcase h1 {
+  margin-top:50px;
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+#mainmenuSlide_container {
+  width:    80%;
+  margin:   auto;
+  overflow: hidden;
+}
+
+#showcase p { font-size:20px; margin:0; }
+
+#latestUpdates {
+  margin-top:50px;
+  padding:10px 10px 10px 10px;
+  height:auto;
+  /* background:#35424A; */
+}
+
+#latestUpdates h1 {
+  margin:0;
+  float:left;
+}
+
+#boxes {
+  display:flex;
+  align-items:flex-start;
+}
+
+#boxes .box {
+  text-align: center;
+  padding:  0px;
+  margin:   5px;
+  background-color: #35424A;
+
+  position: relative;
+  flex:1;
+}
+
+#boxes .box .box_image {
+  width:  100%;
+  height: 200px;
+  background-repeat:    no-repeat;
+  background-position:  center;
+  background-size:      100%;
+  background-color:     var(--color_gray_dark);
+}
+
+#boxes .box .text_container { text-align: left; margin: 5px; }
+#boxes .box .date { font-size: 12px; font-style: italic; }
+#boxes .box h3  { margin:0; padding:0; }
+#boxes .box p   { margin:0; padding:0; width:95%; height: 50px; text-align: justify; }
+#boxes a        { color:#FFFFFF; text-decoration:none; }
+
+#boxes div.readMore { background-color:var(--color_orange_highlight); width:auto; height:auto; margin:0; padding:5px; text-transform: uppercase; font-weight:bold; transition: 0.3s; }
+#boxes div.readMore:hover { background-color:#333333; }
+
+#footer {
+  padding:10px 0 10px 0;
+  margin-top:80px;
+  background-color:#35424A;
+
+  text-align:center;
+  bottom:0;
+  width:100%;
+}
+
+/* Media Queries */
+@media(max-width: 980px) {
+  header #branding,
+  header #header_icon, header #header_text,
+  header #topBar,
+  header #langBar, header #langBar li,
+  header #navBar,  header #navBar li,
+  #boxes, #boxes .box {
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+
+  header #header_text {
+    margin:0;
+    padding:0;
+    height:auto;
+  }
+
+  header #langBar, header #langBar li,
+  header #navBar,  header #navBar li {
+    margin:0;
+  }
+
+  header #langBar ul#lang_long {
+    visibility: hidden;
+  }
+  header #langBar ul#lang_short {
+    visibility: visible;
+  }
+
+  #mainmenuSlide_container {
+    width:100%;
+  }
+
+  #boxes, #boxes .box {
+    display:block;
+  }
+
+  #showcase {
+    float:none;
+    max-height:300px;
+    width:100%;
+  }
+
+  header {
+    padding-bottom:20px;
+  }
+
+  #showcase h1 {
+    margin-top:40px;
+  }
+}
